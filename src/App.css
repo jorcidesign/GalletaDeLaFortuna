@@ -1,0 +1,96 @@
+:root {
+  --main-font: Lora;
+  --secondary-font: Raleway;
+  --text-color: #545454;
+  --author-text-color: #979797;
+  --background-color: #242424;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.background1 {
+  background-image: url("./assets/backgrounds/fondo1.png");
+}
+
+.background2 {
+  background-image: url("./assets/backgrounds/fondo2.png");
+}
+
+.background3 {
+  background-image: url("./assets/backgrounds/fondo3.png");
+}
+
+.background4 {
+  background-image: url("./assets/backgrounds/fondo4.png");
+}
+
+.fortune-cookie-paper {
+  position: relative;
+  width: 45rem; /* Ancho inicial para pantallas más grandes */
+  max-width: 100%; /* Ocupa el ancho completo */
+  height: 15rem;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px; /* Simplificado para aplicar padding en ambos lados */
+  box-sizing: border-box; /* Agregado para incluir el padding en el ancho total */
+  background-image: url("./assets/paper/rectangle2.svg");
+  background-size: cover; /* Deforma la imagen para ajustarse completamente al ancho y alto del contenedor */
+  background-position: center; /* Centra la imagen en el contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.paper-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Agregado prefijo de proveedor */
+}
+
+.paper-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.fortune-text {
+  font-weight: bold;
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30.8px; /* 130% */
+}
+
+.author-text {
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 5px;
+  color: var(--author-text-color);
+}
+
+@media (max-width: 768px) {
+  .fortune-cookie-paper {
+    width: 100%; /* Ocupa el ancho completo en dispositivos móviles */
+  }
+
+  .fortune-text {
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27.3px; /* 130% */
+  }
+}
